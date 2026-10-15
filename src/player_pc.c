@@ -36,6 +36,7 @@ enum {
     MENU_ITEMSTORAGE,
     MENU_MAILBOX,
     MENU_DECORATION,
+    MENU_ULTIMATE,
     MENU_TURNOFF
 };
 
@@ -102,6 +103,7 @@ static void PlayerPC_ItemStorage(u8);
 static void PlayerPC_Mailbox(u8);
 static void PlayerPC_Decoration(u8);
 static void PlayerPC_TurnOff(u8);
+static void PlayerPC_Ultimate(u8);
 
 static void Mailbox_DoMailMoveToBag(u8);
 static void Mailbox_DoMailRead(u8);
@@ -191,6 +193,7 @@ static const struct MenuAction sPlayerPCMenuActions[] =
     [MENU_ITEMSTORAGE] = { COMPOUND_STRING("ITEM STORAGE"), {PlayerPC_ItemStorage} },
     [MENU_MAILBOX]     = { sText_Mailbox,                   {PlayerPC_Mailbox} },
     [MENU_DECORATION]  = { COMPOUND_STRING("DECORATION"),   {PlayerPC_Decoration} },
+    [MENU_ULTIMATE]    = { COMPOUND_STRING("ULTIMATE"),     {PlayerPC_Ultimate} },
     [MENU_TURNOFF]     = { COMPOUND_STRING("TURN OFF"),     {PlayerPC_TurnOff} }
 };
 
@@ -199,6 +202,7 @@ static const u8 sBedroomPC_OptionOrder[] =
     MENU_ITEMSTORAGE,
     MENU_MAILBOX,
     MENU_DECORATION,
+    MENU_ULTIMATE,
     MENU_TURNOFF
 };
 #define NUM_BEDROOM_PC_OPTIONS ARRAY_COUNT(sBedroomPC_OptionOrder)
@@ -207,6 +211,7 @@ static const u8 sPlayerPC_OptionOrder[] =
 {
     MENU_ITEMSTORAGE,
     MENU_MAILBOX,
+    MENU_ULTIMATE,
     MENU_TURNOFF
 };
 #define NUM_PLAYER_PC_OPTIONS ARRAY_COUNT(sPlayerPC_OptionOrder)
@@ -485,6 +490,15 @@ static void PlayerPC_Mailbox(u8 taskId)
 static void PlayerPC_Decoration(u8 taskId)
 {
     DoPlayerRoomDecorationMenu(taskId);
+}
+
+static void PlayerPC_Ultimate(u8 taskId)
+{
+    // Early in-game proof of concept: a small, repeatable supply function.
+    if (AddBagItem(ITEM_POKE_BALL, 5))
+        DisplayItemMessageOnField(taskId, COMPOUND_STRING("ULTIMATE PC: 5 POKE BALL!"), ReshowPlayerPC);
+    else
+        DisplayItemMessageOnField(taskId, gText_BagIsFull, ReshowPlayerPC);
 }
 
 static void PlayerPC_TurnOff(u8 taskId)
