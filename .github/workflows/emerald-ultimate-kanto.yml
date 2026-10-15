@@ -1,0 +1,23 @@
+name: Emerald Ultimate Kanto (FireRed)
+on:
+  workflow_dispatch:
+
+jobs:
+  build-kanto:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Install toolchain
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends binutils-arm-none-eabi gcc-arm-none-eabi libnewlib-arm-none-eabi libpng-dev python3
+      - name: Compile Kanto
+        run: make firered -j$(nproc) -O
+      - name: Upload Kanto ROM
+        uses: actions/upload-artifact@v4
+        with:
+          name: emerald-ultimate-kanto
+          path: |
+            *.gba
+          if-no-files-found: error
