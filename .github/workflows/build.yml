@@ -51,7 +51,15 @@ jobs:
         env:
           GAME_VERSION: EMERALD
         run: make -j$(nproc) -O all
-
+      - name: Save Emerald build
+        uses: actions/upload-artifact@v4
+        with:
+          name: emerald-build
+          path: |
+            *.gba
+            *.elf
+            *.map
+          if-no-files-found: warn
   build-firered:
     if: github.actor != 'allcontributors[bot]'
     runs-on: ubuntu-latest
