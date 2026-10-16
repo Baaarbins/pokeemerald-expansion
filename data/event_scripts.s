@@ -1909,3 +1909,17 @@ Johto_VioletCity_MapScripts::
 Johto_WhirlIslands_MapScripts::
 	.byte 0
 
+Johto_NewBarkTown_Lab_MapScripts::
+    .byte 0
+
+Johto_NewBarkTown_PlayersHouse_1F_MapScripts::
+    .byte 0
+
+Johto_NewBarkTown_PlayersHouse_2F_MapScripts::
+    .byte 0
+
+Johto_NewBarkTown_House1_MapScripts::
+    .byte 0
+
+Johto_NewBarkTown_House2_MapScripts::
+    .byte 0
