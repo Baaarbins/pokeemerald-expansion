@@ -1218,6 +1218,11 @@
     "Johto_IndigoPlateauJohto",
     "Johto_Route28",
     "Johto_MtSilver",
-    "Johto_Route1JohtoLink"
+    "Johto_Route1JohtoLink",
+    "Johto_NewBarkTown_Lab",
+    "Johto_NewBarkTown_PlayersHouse_1F",
+    "Johto_NewBarkTown_PlayersHouse_2F",
+    "Johto_NewBarkTown_House1",
+    "Johto_NewBarkTown_House2"
   ]
 }

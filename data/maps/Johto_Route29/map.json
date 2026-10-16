@@ -17,13 +17,8 @@
   "connections": [
     {
       "map": "MAP_JOHTO_NEW_BARK_TOWN",
-      "offset": 0,
+      "offset": 5,
       "direction": "right"
-    },
-    {
-      "map": "MAP_JOHTO_CHERRYGROVE_CITY",
-      "offset": 0,
-      "direction": "left"
     }
   ],
   "object_events": [],

@@ -418,3 +418,12 @@ const u16 gMetatileAttributes_Johto_General[] = INCBIN_U16("data/tilesets/primar
 const u16 gMetatiles_NewBarkTown[] = INCBIN_U16("data/tilesets/secondary/new_bark_town/metatiles.bin");
 
 const u16 gMetatileAttributes_NewBarkTown[] = INCBIN_U16("data/tilesets/secondary/new_bark_town/metatile_attributes.bin");
+
+const u16 gMetatiles_Johto_Building[] = INCBIN_U16("data/tilesets/primary/johto_building/metatiles.bin");
+const u16 gMetatileAttributes_Johto_Building[] = INCBIN_U16("data/tilesets/primary/johto_building/metatile_attributes.bin");
+
+const u16 gMetatiles_House_Lab[] = INCBIN_U16("data/tilesets/secondary/house_lab/metatiles.bin");
+const u16 gMetatileAttributes_House_Lab[] = INCBIN_U16("data/tilesets/secondary/house_lab/metatile_attributes.bin");
+
+const u16 gMetatiles_PlayersHouse[] = INCBIN_U16("data/tilesets/secondary/players_house/metatiles.bin");
+const u16 gMetatileAttributes_PlayersHouse[] = INCBIN_U16("data/tilesets/secondary/players_house/metatile_attributes.bin");
