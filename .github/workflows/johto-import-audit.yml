@@ -1,0 +1,71 @@
+name: Johto import audit
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Emerald Ultimate
+        uses: actions/checkout@v4
+        with:
+          path: ultimate
+      - name: Checkout Pokemon World
+        uses: actions/checkout@v4
+        with:
+          repository: evilchinesefood/PKMN-World
+          ref: master
+          path: world
+      - name: Compare Johto content
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import csv
+          import json
+          from collections import Counter
+          base = Path('ultimate')
+          source = Path('world')
+          out = Path('johto-audit')
+          out.mkdir(exist_ok=True)
+          rows = []
+          for folder in ('data/maps', 'data/layouts', 'data/tilesets', 'graphics'):
+              root = source / folder
+              if not root.exists():
+                  continue
+              for p in sorted(root.rglob('*')):
+                  if not p.is_file():
+                      continue
+                  rel = p.relative_to(source)
+                  if 'johto' not in str(rel).lower() and folder != 'data/tilesets':
+                      continue
+                  dest = base / rel
+                  status = 'missing' if not dest.exists() else ('same' if p.read_bytes() == dest.read_bytes() else 'different')
+                  rows.append((str(rel), status, p.stat().st_size))
+          with (out / 'johto-files.csv').open('w', newline='') as f:
+              w = csv.writer(f)
+              w.writerow(('source_path', 'target_status', 'source_bytes'))
+              w.writerows(rows)
+          counts = Counter(status for _, status, _ in rows)
+          summary = [
+              '# Johto import audit', '',
+              'Source: evilchinesefood/PKMN-World (master)',
+              'Target: current Emerald Ultimate checkout', '',
+              f'Johto-named files plus tileset files scanned: {len(rows)}',
+              *(f'- {k}: {counts[k]}' for k in ('missing', 'different', 'same')),
+              '',
+              'This audit does not import files, change gameplay, or establish compatibility.',
+              'Files without Johto in their paths (such as shared scripts and registries) need separate analysis.',
+          ]
+          (out / 'README.md').write_text('\n'.join(summary) + '\n')
+          print('\n'.join(summary))
+          PY
+      - name: Upload audit report
+        uses: actions/upload-artifact@v4
+        with:
+          name: johto-import-audit
+          path: johto-audit/
