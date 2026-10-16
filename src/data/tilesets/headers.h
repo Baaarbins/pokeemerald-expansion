@@ -1550,8 +1550,9 @@ const struct Tileset gTileset_Johto_General =
     .isSecondary = FALSE,
     .tiles = gTilesetTiles_Johto_General,
     .palettes = gTilesetPalettes_Johto_General,
-    TILESET_METATILES(gMetatiles_Johto_General, gMetatileAttributes_Johto_General),
-    .callback = InitTilesetAnim_JohtoGeneral,
+    .metatiles = gMetatiles_Johto_General,
+    .metatileAttributes = gMetatileAttributes_Johto_General,
+    .callback = NULL,
 };
 
 const struct Tileset gTileset_NewBarkTown =
@@ -1560,6 +1561,7 @@ const struct Tileset gTileset_NewBarkTown =
     .isSecondary = TRUE,
     .tiles = gTilesetTiles_NewBarkTown,
     .palettes = gTilesetPalettes_NewBarkTown,
-    TILESET_METATILES(gMetatiles_NewBarkTown, gMetatileAttributes_NewBarkTown),
+    .metatiles = gMetatiles_NewBarkTown,
+    .metatileAttributes = gMetatileAttributes_NewBarkTown,
     .callback = NULL,
 };
