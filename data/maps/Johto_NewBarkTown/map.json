@@ -24,28 +24,28 @@
   "object_events": [],
   "warp_events": [
     {
-      "x": 13,
+      "x": 12,
       "y": 9,
       "elevation": 0,
       "dest_map": "MAP_JOHTO_NEW_BARK_TOWN_LAB",
       "dest_warp_id": "0"
     },
     {
-      "x": 23,
+      "x": 22,
       "y": 11,
       "elevation": 0,
       "dest_map": "MAP_JOHTO_NEW_BARK_TOWN_PLAYERS_HOUSE_1_F",
       "dest_warp_id": "0"
     },
     {
-      "x": 7,
+      "x": 6,
       "y": 21,
       "elevation": 0,
       "dest_map": "MAP_JOHTO_NEW_BARK_TOWN_HOUSE1",
       "dest_warp_id": "0"
     },
     {
-      "x": 18,
+      "x": 17,
       "y": 21,
       "elevation": 0,
       "dest_map": "MAP_JOHTO_NEW_BARK_TOWN_HOUSE2",
