@@ -20,7 +20,21 @@
     {
       "x": 4,
       "y": 8,
-      "elevation": 0,
+      "elevation": 3,
+      "dest_map": "MAP_JOHTO_NEW_BARK_TOWN",
+      "dest_warp_id": "3"
+    },
+    {
+      "x": 5,
+      "y": 8,
+      "elevation": 3,
+      "dest_map": "MAP_JOHTO_NEW_BARK_TOWN",
+      "dest_warp_id": "3"
+    },
+    {
+      "x": 3,
+      "y": 8,
+      "elevation": 3,
       "dest_map": "MAP_JOHTO_NEW_BARK_TOWN",
       "dest_warp_id": "3"
     }
