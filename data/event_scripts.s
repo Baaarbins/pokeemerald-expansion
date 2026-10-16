@@ -1738,3 +1738,174 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/scripts/battle_frontier.inc"
 	.include "data/scripts/apricorn_tree.inc"
 	.include "data/scripts/wild_encounter.inc"
+
+	@ Emerald Ultimate: temporary empty map scripts for 56 Johto maps.
+	@ These do not implement events, warps, or the Johto storyline.
+Johto_AzaleaTown_MapScripts::
+	.byte 0
+
+Johto_BellTower_MapScripts::
+	.byte 0
+
+Johto_BlackthornCity_MapScripts::
+	.byte 0
+
+Johto_BurnedTower_MapScripts::
+	.byte 0
+
+Johto_CherrygroveCity_MapScripts::
+	.byte 0
+
+Johto_CianwoodCity_MapScripts::
+	.byte 0
+
+Johto_CliffCave_MapScripts::
+	.byte 0
+
+Johto_DarkCave_MapScripts::
+	.byte 0
+
+Johto_DragonsDen_MapScripts::
+	.byte 0
+
+Johto_EcruteakCity_MapScripts::
+	.byte 0
+
+Johto_GoldenrodCity_MapScripts::
+	.byte 0
+
+Johto_IcePath_MapScripts::
+	.byte 0
+
+Johto_IlexForest_MapScripts::
+	.byte 0
+
+Johto_IndigoPlateauJohto_MapScripts::
+	.byte 0
+
+Johto_LakeOfRage_MapScripts::
+	.byte 0
+
+Johto_MahoganyTown_MapScripts::
+	.byte 0
+
+Johto_MtMortar_MapScripts::
+	.byte 0
+
+Johto_MtSilver_MapScripts::
+	.byte 0
+
+Johto_NationalPark_MapScripts::
+	.byte 0
+
+Johto_NewBarkTown_MapScripts::
+	.byte 0
+
+Johto_OlivineCity_MapScripts::
+	.byte 0
+
+Johto_OlivineLighthouse_MapScripts::
+	.byte 0
+
+Johto_Route1JohtoLink_MapScripts::
+	.byte 0
+
+Johto_Route26_MapScripts::
+	.byte 0
+
+Johto_Route27_MapScripts::
+	.byte 0
+
+Johto_Route28_MapScripts::
+	.byte 0
+
+Johto_Route29_MapScripts::
+	.byte 0
+
+Johto_Route30_MapScripts::
+	.byte 0
+
+Johto_Route31_MapScripts::
+	.byte 0
+
+Johto_Route32_MapScripts::
+	.byte 0
+
+Johto_Route33_MapScripts::
+	.byte 0
+
+Johto_Route34_MapScripts::
+	.byte 0
+
+Johto_Route35_MapScripts::
+	.byte 0
+
+Johto_Route36_MapScripts::
+	.byte 0
+
+Johto_Route37_MapScripts::
+	.byte 0
+
+Johto_Route38_MapScripts::
+	.byte 0
+
+Johto_Route39_MapScripts::
+	.byte 0
+
+Johto_Route40_MapScripts::
+	.byte 0
+
+Johto_Route41_MapScripts::
+	.byte 0
+
+Johto_Route42_MapScripts::
+	.byte 0
+
+Johto_Route43_MapScripts::
+	.byte 0
+
+Johto_Route44_MapScripts::
+	.byte 0
+
+Johto_Route45_MapScripts::
+	.byte 0
+
+Johto_Route46_MapScripts::
+	.byte 0
+
+Johto_Route47_MapScripts::
+	.byte 0
+
+Johto_Route48_MapScripts::
+	.byte 0
+
+Johto_RuinsOfAlph_MapScripts::
+	.byte 0
+
+Johto_SafariZoneGate_MapScripts::
+	.byte 0
+
+Johto_SlowpokeWell_MapScripts::
+	.byte 0
+
+Johto_SproutTower_MapScripts::
+	.byte 0
+
+Johto_TeamRocketHideout_MapScripts::
+	.byte 0
+
+Johto_TohjoFalls_MapScripts::
+	.byte 0
+
+Johto_UnionCave_MapScripts::
+	.byte 0
+
+Johto_VictoryRoadJohto_MapScripts::
+	.byte 0
+
+Johto_VioletCity_MapScripts::
+	.byte 0
+
+Johto_WhirlIslands_MapScripts::
+	.byte 0
+
