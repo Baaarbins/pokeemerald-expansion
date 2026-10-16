@@ -1,0 +1,46 @@
+name: Emerald Ultimate - Capitolo 1 Pokemon Completo
+on:
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Installa dipendenze
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y build-essential gcc-arm-none-eabi binutils-arm-none-eabi libnewlib-arm-none-eabi python3 libpng-dev
+      - name: Verifica specie e forme e abilita opzioni non invasive
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+          species=Path('include/config/species_enabled.h')
+          pokemon=Path('include/config/pokemon.h')
+          battle=Path('include/config/battle.h')
+          required=['P_GEN_%d_POKEMON'%i for i in range(1,10)]+['P_MEGA_EVOLUTIONS','P_PRIMAL_REVERSIONS','P_ULTRA_BURST_FORMS','P_GIGANTAMAX_FORMS','P_TERA_FORMS','P_FUSION_FORMS','P_REGIONAL_FORMS','P_CROSS_GENERATION_EVOS']
+          s=species.read_text()
+          for key in required:
+              match=re.search(r'^#define\s+'+key+r'\s+(\S+)',s,re.M)
+              if not match or match.group(1)!='TRUE':
+                  raise SystemExit(f'{key} non abilitato o non presente: stop per sicurezza')
+          for path,changes in [(pokemon,{'P_SHOW_TERA_TYPE':'GEN_9','P_SHOW_DYNAMIC_TYPES':'TRUE'}),(battle,{'B_SHOW_DYNAMAX_MESSAGE':'TRUE'})]:
+              t=path.read_text()
+              for key,value in changes.items():
+                  pattern=r'(^#define\s+'+key+r'\s+)\S+'
+                  t,count=re.subn(pattern,lambda m:m.group(1)+value,t,count=1,flags=re.M)
+                  if count!=1: raise SystemExit(f'{key} mancante in {path}')
+              path.write_text(t)
+          Path('CAPITOLO1_VERIFICA.txt').write_text('Generazioni I-IX, Mega, Primal, Ultra, Gigamax, Tera, fusioni, regionali ed evoluzioni intergenerazionali: flag abilitati.\nNon certifica disponibilita in gioco o ogni forma, ne verifica singole evoluzioni.\n')
+          print('Controllo configurazioni completato.')
+          PY
+      - name: Compila Kanto
+        run: make firered -j$(nproc) -O
+      - name: Carica ROM e verifica
+        uses: actions/upload-artifact@v4
+        with:
+          name: emerald-ultimate-capitolo1
+          path: |
+            *.gba
+            CAPITOLO1_VERIFICA.txt
+          if-no-files-found: error
