@@ -408,3 +408,13 @@ const u16 gMetatiles_HallOfFame[] = INCBIN_U16("data/tilesets/secondary/hall_of_
 const u16 gMetatileAttributes_HallOfFame[] = INCBIN_U16("data/tilesets/secondary/hall_of_fame_frlg/metatile_attributes.bin");
 
 #endif // IS_FRLG
+
+
+// Johto New Bark Town imported tilesets
+const u16 gMetatiles_Johto_General[] = INCBIN_U16("data/tilesets/primary/johto_general/metatiles.bin");
+
+const u16 gMetatileAttributes_Johto_General[] = INCBIN_U16("data/tilesets/primary/johto_general/metatile_attributes.bin");
+
+const u16 gMetatiles_NewBarkTown[] = INCBIN_U16("data/tilesets/secondary/new_bark_town/metatiles.bin");
+
+const u16 gMetatileAttributes_NewBarkTown[] = INCBIN_U16("data/tilesets/secondary/new_bark_town/metatile_attributes.bin");

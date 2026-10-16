@@ -1541,3 +1541,25 @@ const struct Tileset gTileset_HallOfFame =
 };
 
 #endif // IS_FRLG
+
+
+// Johto New Bark Town imported tilesets
+const struct Tileset gTileset_Johto_General =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_Johto_General,
+    .palettes = gTilesetPalettes_Johto_General,
+    TILESET_METATILES(gMetatiles_Johto_General, gMetatileAttributes_Johto_General),
+    .callback = InitTilesetAnim_JohtoGeneral,
+};
+
+const struct Tileset gTileset_NewBarkTown =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_NewBarkTown,
+    .palettes = gTilesetPalettes_NewBarkTown,
+    TILESET_METATILES(gMetatiles_NewBarkTown, gMetatileAttributes_NewBarkTown),
+    .callback = NULL,
+};

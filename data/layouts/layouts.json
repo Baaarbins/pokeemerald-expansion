@@ -9327,15 +9327,15 @@
     {
       "id": "LAYOUT_JOHTO_NEW_BARK_TOWN",
       "name": "Johto_NewBarkTown_Layout",
-      "width": 24,
-      "height": 20,
-      "border_width": 2,
-      "border_height": 2,
-      "primary_tileset": "gTileset_General_Frlg",
-      "secondary_tileset": "gTileset_PalletTown",
+      "width": 30,
+      "height": 39,
+      "border_width": 0,
+      "border_height": 0,
+      "primary_tileset": "gTileset_Johto_General",
+      "secondary_tileset": "gTileset_NewBarkTown",
       "border_filepath": "data/layouts/Johto_NewBarkTown/border.bin",
       "blockdata_filepath": "data/layouts/Johto_NewBarkTown/map.bin",
-      "layout_version": "frlg"
+      "layout_version": "johto"
     },
     {
       "id": "LAYOUT_JOHTO_ROUTE29",
