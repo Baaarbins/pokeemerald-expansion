@@ -1,0 +1,15 @@
+EMERALD ULTIMATE - PRIMO IMPORT JOHTO
+
+Questi sono i file originali di tre mappe di PKMN-World:
+NewBarkTown, Route29, CherrygroveCity.
+
+Sono collocati in johto_import_source/ per non sostituire
+mappe, layout, scripts o registrazioni esistenti.
+
+IMPORTANTE: questo pacchetto NON rende Johto giocabile.
+Passo successivo: confrontare gli ID layout, i tileset, le connessioni
+e gli script; integrare in data/maps e data/layouts con i relativi
+registri e verificare la compilazione.
+
+Caricare solo nel branch johto-integration.
+Fonte: https://github.com/evilchinesefood/PKMN-World
