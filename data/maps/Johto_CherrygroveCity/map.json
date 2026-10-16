@@ -14,7 +14,13 @@
   "show_map_name": true,
   "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": [],
+  "connections": [
+    {
+      "map": "MAP_JOHTO_ROUTE29",
+      "offset": 0,
+      "direction": "right"
+    }
+  ],
   "object_events": [],
   "warp_events": [],
   "coord_events": [],

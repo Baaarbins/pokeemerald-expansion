@@ -14,7 +14,18 @@
   "show_map_name": true,
   "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": [],
+  "connections": [
+    {
+      "map": "MAP_JOHTO_NEW_BARK_TOWN",
+      "offset": 0,
+      "direction": "right"
+    },
+    {
+      "map": "MAP_JOHTO_CHERRYGROVE_CITY",
+      "offset": 0,
+      "direction": "left"
+    }
+  ],
   "object_events": [],
   "warp_events": [],
   "coord_events": [],
