@@ -406,7 +406,10 @@ PalletTown_EventScript_RivalsHouseSign::
 	end
 
 PalletTown_EventScript_TownSign::
-	msgbox PalletTown_Text_TownSign, MSGBOX_SIGN
+	lockall
+	warp MAP_JOHTO_NEW_BARK_TOWN, 12, 11
+	waitstate
+	releaseall
 	end
 
 PalletTown_EventScript_TrainerTips::
@@ -546,3 +549,11 @@ PalletTown_Text_PressStartToOpenMenuCopy::
 	.string "Press START to open the MENU!$"
 
 
+
+@ Temporary return point from Johto to Pallet Town.
+Johto_NewBarkTown_EventScript_ReturnToPallet::
+	lockall
+	warp MAP_PALLET_TOWN, 9, 12
+	waitstate
+	releaseall
+	end

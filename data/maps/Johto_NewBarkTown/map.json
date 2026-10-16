@@ -14,15 +14,18 @@
   "show_map_name": true,
   "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": [
-    {
-      "map": "MAP_JOHTO_ROUTE29",
-      "offset": 0,
-      "direction": "left"
-    }
-  ],
+  "connections": [],
   "object_events": [],
   "warp_events": [],
   "coord_events": [],
-  "bg_events": []
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 12,
+      "y": 10,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Johto_NewBarkTown_EventScript_ReturnToPallet"
+    }
+  ]
 }
