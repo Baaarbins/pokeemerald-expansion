@@ -9329,13 +9329,13 @@
       "name": "Johto_NewBarkTown_Layout",
       "width": 30,
       "height": 39,
-      "border_width": 0,
-      "border_height": 0,
+      "border_width": 2,
+      "border_height": 2,
       "primary_tileset": "gTileset_Johto_General",
       "secondary_tileset": "gTileset_NewBarkTown",
       "border_filepath": "data/layouts/Johto_NewBarkTown/border.bin",
       "blockdata_filepath": "data/layouts/Johto_NewBarkTown/map.bin",
-      "layout_version": "johto"
+      "layout_version": "frlg"
     },
     {
       "id": "LAYOUT_JOHTO_ROUTE29",
