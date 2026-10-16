@@ -10061,8 +10061,8 @@
       "border_height": 2,
       "primary_tileset": "gTileset_BuildingFrlg",
       "secondary_tileset": "gTileset_Lab_Frlg",
-      "border_filepath": "data/layouts/PalletTown_ProfessorOaksLab_Frlg/border.bin",
-      "blockdata_filepath": "data/layouts/PalletTown_ProfessorOaksLab_Frlg/map.bin",
+      "border_filepath": "data/layouts/Johto_NewBarkTown_Lab/border.bin",
+      "blockdata_filepath": "data/layouts/Johto_NewBarkTown_Lab/map.bin",
       "layout_version": "frlg"
     },
     {
@@ -10074,8 +10074,8 @@
       "border_height": 2,
       "primary_tileset": "gTileset_BuildingFrlg",
       "secondary_tileset": "gTileset_GenericBuilding1",
-      "border_filepath": "data/layouts/PalletTown_PlayersHouse_1F_Frlg/border.bin",
-      "blockdata_filepath": "data/layouts/PalletTown_PlayersHouse_1F_Frlg/map.bin",
+      "border_filepath": "data/layouts/Johto_NewBarkTown_PlayersHouse_1F/border.bin",
+      "blockdata_filepath": "data/layouts/Johto_NewBarkTown_PlayersHouse_1F/map.bin",
       "layout_version": "frlg"
     },
     {
@@ -10087,8 +10087,8 @@
       "border_height": 2,
       "primary_tileset": "gTileset_BuildingFrlg",
       "secondary_tileset": "gTileset_GenericBuilding1",
-      "border_filepath": "data/layouts/PalletTown_PlayersHouse_2F_Frlg/border.bin",
-      "blockdata_filepath": "data/layouts/PalletTown_PlayersHouse_2F_Frlg/map.bin",
+      "border_filepath": "data/layouts/Johto_NewBarkTown_PlayersHouse_2F/border.bin",
+      "blockdata_filepath": "data/layouts/Johto_NewBarkTown_PlayersHouse_2F/map.bin",
       "layout_version": "frlg"
     },
     {
@@ -10100,8 +10100,8 @@
       "border_height": 2,
       "primary_tileset": "gTileset_BuildingFrlg",
       "secondary_tileset": "gTileset_GenericBuilding2",
-      "border_filepath": "data/layouts/PalletTown_RivalsHouse_Frlg/border.bin",
-      "blockdata_filepath": "data/layouts/PalletTown_RivalsHouse_Frlg/map.bin",
+      "border_filepath": "data/layouts/Johto_NewBarkTown_House1/border.bin",
+      "blockdata_filepath": "data/layouts/Johto_NewBarkTown_House1/map.bin",
       "layout_version": "frlg"
     },
     {
@@ -10113,8 +10113,8 @@
       "border_height": 2,
       "primary_tileset": "gTileset_BuildingFrlg",
       "secondary_tileset": "gTileset_GenericBuilding2",
-      "border_filepath": "data/layouts/PalletTown_RivalsHouse_Frlg/border.bin",
-      "blockdata_filepath": "data/layouts/PalletTown_RivalsHouse_Frlg/map.bin",
+      "border_filepath": "data/layouts/Johto_NewBarkTown_House2/border.bin",
+      "blockdata_filepath": "data/layouts/Johto_NewBarkTown_House2/map.bin",
       "layout_version": "frlg"
     }
   ]
